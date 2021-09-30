@@ -1,15 +1,10 @@
-let numbers = [
-    5,
-    8,
-    0,
-    1,
-    9,
-    11,
-    15,
-    16
-];
+var fs = require("fs");
+var numbers = fs.readFileSync("./data.txt").toString('utf-8');
+var numbers = numbers.split(",")
 
-console.log("Original numbers list: ", numbers)
+// console.log(numbers)
+
+// console.log("Original numbers list: ", numbers)
 
 for(let i = 0 ; i < numbers.length ; i++)
 {
@@ -24,7 +19,7 @@ for(let i = 0 ; i < numbers.length ; i++)
     }
 }
 
-console.log("Numbers list After sorting: ", numbers)
+// console.log("Numbers list After sorting: ", numbers)
 
 for(let i = 0 ; i < numbers.length ; i++)
 {
